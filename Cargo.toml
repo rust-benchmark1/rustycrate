@@ -1,0 +1,37 @@
+[package]
+name = "rustycrate"
+version = "0.1.0"
+authors = ["Your Name <youremail@example.com>"]
+edition = "2018"
+
+# Dependencies for the project
+[dependencies]
+# Web framework for handling HTTP requests
+actix-web = "4.0"
+actix-rt = "2.5"
+
+# Database libraries for interacting with PostgreSQL, MySQL, and SQLite
+sqlx = { version = "0.5", features = ["runtime-async-std-native-tls", "postgres", "sqlite", "mysql"] }
+diesel = { version = "1.4.8", features = ["postgres", "sqlite", "mysql"] }
+
+# JWT handling for authentication and token management
+jsonwebtoken = "8.1"
+
+# Cryptographic hashing algorithms for encryption and hashing
+md5 = "0.7"
+sha1 = "0.10"
+
+# Base64 encoding (used instead of encryption for an insecure example)
+base64 = "0.13"
+
+# HTTP client library for SSRF detection
+reqwest = { version = "0.11", features = ["blocking", "json"] }
+
+# PostgreSQL library for direct connections (can be used for SQL injection examples)
+tokio-postgres = { version = "0.7", features = ["with-uuid", "with-serde_json"] }
+
+# Random number generation for cryptographic examples (non-cryptographic random generation example)
+rand = "0.8"
+
+# Logging library for outputting sensitive information
+log = "0.4"
