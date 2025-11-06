@@ -98,3 +98,90 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Contact
 
 For questions or support, reach out via GitHub issues or email me at Sean.Carroll@checkmarx.com
+
+
+# Vulnerabilities Overview
+This project contains some vulnerabilities, but there is no main.rs or lib.rs, so the functions are never called and we cannot confirm the presence of user input.
+
+## /src/auth.rs
+**Example 1** - CWE-321: Use of Hard-coded Cryptographic Key (Not supported)
+
+Not expected to be detected, the function is never called.
+- **Source:** Line 12
+- **Sink:** Line 22  
+
+**Example 2** - CWE-321: Use of Hard-coded Cryptographic Key (Not supported)
+
+Not expected to be detected, the function is never called.
+- **Source:** Line 12
+- **Sink:** Line 27 
+
+**Example 3** - CWE-613: Insufficient Session Expiration (Not supported)
+
+Not expected to be detected, the function is never called.
+- **Source:** Line 16
+- **Sink:** Line 22 
+
+**Example 4** - CWE-345: Insufficient Verification of Data Authenticity (Not supported)
+
+Not expected to be detected, the function is never called.
+- **Source:** Line 31
+- **Sink:** Line 34
+
+---
+
+## /src/command.rs
+**Example 1** - CWE-78: OS Command Injection (Supported)
+
+Not expected to be detected, the function is never called.
+- **Source:** Line 4
+- **Sink:** Line 5  
+
+---
+
+## /src/db.rs
+**Example 1** - CWE-89: SQL Injection (Supported)
+
+Not expected to be detected, the function is never called.
+- **Source:** Line 5
+- **Sink:** Line 7  
+
+**Example 2** - CWE-89: SQL Injection (Supported)
+
+Not expected to be detected, the function is never called.
+- **Source:** Line 12
+- **Sink:** Line 13
+
+**Example 3** - CWE-89: SQL Injection (Supported)
+
+Not expected to be detected, the function is never called.
+- **Source:** Line 23
+- **Sink:** Line 25
+
+**Example 4** - CWE-78: OS Command Injection (Supported)
+
+Not expected to be detected, the function is never called.
+- **Source:** Line 34
+- **Sink:** Line 35
+
+---
+
+## /src/file_handler.rs
+**Example 1** - CWE-22: Path Traversal (Supported)
+
+Not expected to be detected, the function is never called.
+- **Source:** Line 6
+- **Sink:** Line 7  
+
+**Example 2** - CWE-22: Path Traversal (Supported)
+
+Not expected to be detected, the function is never called.
+- **Source:** Line 13
+- **Sink:** Line 14 
+
+**Example 3** - CWE-22: Path Traversal (Supported)
+
+Not expected to be detected, the function is never called.
+- **Source:** Line 13
+- **Sink:** Line 16  
+
